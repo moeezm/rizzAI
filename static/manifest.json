@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "RizzAI",
+    "description": "GPT-powered rizz",
+    "version": "1.0",
+    "action": {
+        "default_icon": "icon.png"
+    },
+    "content_scripts": [
+        {
+            "js": ["main.js", "openai.js"],
+            "matches": [
+                "https://tinder.com/*"
+            ],
+            "run_at": "document_idle"
+        },
+        {
+            "js": ["intercept.js"],
+            "matches": [
+                "https://tinder.com/*"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "host_permissions": ["https://tinder.com/*"],
+    "web_accessible_resources": [
+        {
+            "resources": ["override.js"],
+            "matches": ["<all_urls>"]
+        }
+    ]
+}

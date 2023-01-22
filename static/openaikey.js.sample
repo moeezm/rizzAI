@@ -1,0 +1,2 @@
+const key = "<insert OpenAI API key here>";
+export {key};
