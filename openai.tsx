@@ -1,14 +1,3 @@
-// async function testOpenAI() {
-//     let response = await fetch("https://api.openai.com/v1/models", {
-//         method: "GET",
-//         headers: {
-//             "Content-Type": "application/json",
-//             "Authorization": "Bearer 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"
-//         }
-//     });
-//     let data = await response.json();
-//     return data;
-// }
 import {key as API_KEY} from "./static/openaikey";
 
 async function OpenAI(endpoint="models", type="GET", data={}) {
